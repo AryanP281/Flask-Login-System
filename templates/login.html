@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Login</title>
+    </head>
+    <body>
+        <form action="" method="POST">
+            <label>Email: </label>
+            <input type="text" name="email"><br><br>
+            <label>Password: </label>
+            <input type="password" name="pss"><br><br>
+            <input type="submit"><br><br>
+        </form>
+        <em>Do not have an account ? <a href="{{ url_for('sign_up') }}">Sign Up </a> </em><br><br>
+        <em>Forgot Password ? <a href="{{ url_for('forgot_password_email') }}">Change Password </a> </em>
+    </body>
+</html>
