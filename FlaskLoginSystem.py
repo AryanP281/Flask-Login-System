@@ -89,7 +89,7 @@ class LoginManager(object) :
                     sql_command += f"'{user_data[table_fields[data]]}', "
 
             #Checking if the field needs to be encrypted before saving in database
-            if(user_data[table_fields[-1]] in self.fields_to_encrypt) :
+            if(table_fields[-1] in self.fields_to_encrypt) :
                 sql_command += f"'{generate_password_hash(user_data[table_fields[-1]])}' )"
             else :
                 sql_command += f"'{user_data[table_fields[-1]]}' )"
